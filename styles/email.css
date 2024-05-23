@@ -15,8 +15,8 @@ img{
 }
     .card{
         background-color: #47693B;
-        height: 200px;
-        width: 600px;
+        height: 290px;
+        width: 900px;
         display: grid;
         grid-template-columns: 1.5fr 1fr 1fr;
         border-radius: 45px;

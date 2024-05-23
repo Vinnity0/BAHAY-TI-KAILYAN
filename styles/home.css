@@ -123,6 +123,7 @@ main .img-container{
 }
 main .img-container img{
     width: 400px;
+    border-radius: 30px;
 }
 .border-title{
     display: flex;
