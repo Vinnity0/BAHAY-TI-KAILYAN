@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/email.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("E0Q8zW3Y4v4qlDn-x"); // Replace with your EmailJS user ID
+        })();
+    </script>
+</head>
+<body>
+    <header class="sticky">
+        <nav class="top-bar">
+            <div class="top-left">
+                <img src="RESOURCES/White Modern Minimalist Signature Brand Logo (1).png" alt="">
+            </div>
+            <div class="top-center flex-center">
+                <a href="index.html">BALAY TI KAILYAN</a>
+            </div>
+            <div class="top-right grid-center">
+                <div></div>
+                <div class="top-nav home"><a href="index.html">Home&nbsp;&nbsp;|</a></div>
+                <div class="top-nav rooms"><a href="#">&nbsp;&nbsp;Rooms&nbsp;&nbsp;|</a></div>
+                <div class="top-nav about"><a href="about.html">&nbsp;&nbsp;About</a></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+    </div>
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="pic-container">
+                    <img src="RESOURCES/SINGLE ROOM.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h2>Single room</h2>
+                    <h4>1 Double Bed <br>Balcont/Terrace</h4>
+                    <div class="rate">4.5</div>
+                </div>
+                <div class="price-container">
+                    <div class="price">&#8369;1,250</div>
+                    <button class="button" id="sendEmailBtn" onclick="sendEmail()">Book</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic-container">
+                    <img src="RESOURCES/SINGLE ROOM.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h2>Single room</h2>
+                    <h4>1 Double Bed <br>Balcont/Terrace</h4>
+                    <div class="rate">4.5</div>
+                </div>
+                <div class="price-container">
+                    <div class="price">&#8369;1,250</div>
+                    <button class="button" id="sendEmailBtn" onclick="sendEmail()">Book</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic-container">
+                    <img src="RESOURCES/SINGLE ROOM.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h2>Single room</h2>
+                    <h4>1 Double Bed <br>Balcont/Terrace</h4>
+                    <div class="rate">4.5</div>
+                </div>
+                <div class="price-container">
+                    <div class="price">&#8369;1,250</div>
+                    <button class="button" id="sendEmailBtn" onclick="sendEmail()">Book</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/email.js"></script>
+</body>
+</html>

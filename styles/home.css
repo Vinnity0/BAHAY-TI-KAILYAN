@@ -36,7 +36,8 @@ header nav{
     height: 100px;
     width: 100px;
 }
-.top-center h2{
+.top-center a{
+    text-decoration: none;
     font-size: 32px;
     color: white;
 }
@@ -105,6 +106,10 @@ main .title{
     border-radius: 30px;
 }
 main .img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -114,16 +119,16 @@ main .img-container{
     background-color: aliceblue;
     width: 80%;
     height: 40%;
+    overflow: hidden;
 }
 main .img-container img{
-    
+    width: 400px;
 }
 .border-title{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: ;
     border-radius: 84px;
 }
 .title-2-1{
