@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email Example</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("E0Q8zW3Y4v4qlDn-x"); // Replace with your EmailJS user ID
+        })();
+    </script>
+</head>
+<body>
+    <button id="sendEmailBtn">Send Email</button>
+
+    <script src="sendEmail.js"></script>
+</body>
+</html>
+
+================================================================================
+
+document.getElementById('sendEmailBtn').addEventListener('click', function() {
+    // Define the parameters for the email
+    const templateParams = {
+        to_email: 'spdsheart@gmail.com', // Replace with recipient's email
+        from_name: 'ako',
+        message: 'This is the message you want to send.'
+    };
+
+    // Send the email using EmailJS
+    emailjs.send('service_iqwd86f', 'template_1rzcfw5', templateParams)
+        .then(function(response) {
+           console.log('SUCCESS!', response.status, response.text);
+           alert('Email sent successfully!');
+        }, function(error) {
+           console.error('FAILED...', error);
+           alert('Failed to send email.');
+        });
+});
+======================================================================
+The Public Key is invalid. To find this ID, visit '
+https://dashboard.emailjs.com/admin/account
+
+public key: E0Q8zW3Y4v4qlDn-x
+
+=======================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email</title>
+    <!-- Include EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("your_user_id"); // Replace with your actual EmailJS User ID
+        })();
+    </script>
+</head>
+<body>
+    <!-- Define multiple buttons with unique identifiers -->
+    <button id="sendEmailBtn1" class="sendEmailBtn" data-template-id="template_1rzcfw5">Send Email 1</button>
+    <button id="sendEmailBtn2" class="sendEmailBtn" data-template-id="template_1rzcfw5">Send Email 2</button>
+    <button id="sendEmailBtn3" class="sendEmailBtn" data-template-id="template_1rzcfw5">Send Email 3</button>
+    <button id="sendEmailBtn4" class="sendEmailBtn" data-template-id="template_1rzcfw5">Send Email 4</button>
+    <button id="sendEmailBtn5" class="sendEmailBtn" data-template-id="template_1rzcfw5">Send Email 5</button>
+
+    <script>
+        // Get all buttons with class 'sendEmailBtn'
+        const buttons = document.querySelectorAll('.sendEmailBtn');
+        
+        // Attach click event listener to each button
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Get the template ID associated with the clicked button
+                const templateId = this.getAttribute('data-template-id');
+                
+                // Define the parameters for the email based on the clicked button
+                const templateParams = {
+                    to_email: 'spdsheart@gmail.com', // Replace with recipient's email
+                    from_name: 'ako',
+                    message: `This is the message for Email ${templateId}.`
+                };
+
+                // Send the email using EmailJS with the corresponding template ID
+                emailjs.send('service_iqwd86f', templateId, templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        alert('Email sent successfully!');
+                    }, function(error) {
+                        console.error('FAILED...', error);
+                        alert('Failed to send email.');
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+may problem
+
+'The template ID not found. To find this ID, visit https://dashboard.emailjs.com/admin/templates'

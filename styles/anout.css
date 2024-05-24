@@ -1,0 +1,35 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #e0f2e9; /* Pastel green background */
+}
+
+.header {
+    height: 40px;
+    align-items: center;
+    display: flex;
+    border-radius: 50px;
+    background-color: #3baf36; /* Darker green header */
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+.content {
+    padding: 2em;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Centering the content */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
